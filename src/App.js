@@ -16,6 +16,7 @@ function App() {
     <Route path="/Edit-Inventory" element="Edit-Inventory" />;
     <Route path="/Add-Inventory" element="Add-Inventory" />;
     <Route path="/Delete-Inventory" element="Delete-Inventory" />;
+    <Route path="/Delete-Inventory" element="f-Delete-Inventory" />;
     </Routes>
     </div>
    </BrowserRouter>
