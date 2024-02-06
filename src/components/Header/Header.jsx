@@ -9,9 +9,11 @@ export default function Header() {
             </nav>
             <nav className="header__nav-bar">
                 <div className="header__active-nav-item">
-                    <span className="header__nav-link">Warehouses</span>
+                    <h3 className="header__nav-link">Warehouses</h3>
                 </div>
-                <span className="header__nav-link header__nav-link--inactive">Inventory</span>
+                <div className="header__inventory">
+                    <h3 className="header__nav-link header__nav-link--inactive">Inventory</h3>
+                </div>
             </nav>
         </header>
     )

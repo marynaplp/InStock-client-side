@@ -32,7 +32,7 @@
     &__nav-bar {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         padding:1rem;
 
         @include tablet {
@@ -59,12 +59,22 @@
         height: 36px;
         display: flex;
         align-items: center;
+        justify-content: center;
         border-radius: 20px;
-        padding: 0 3rem;
+        width: 50%;
 
         @include tablet {
             padding: 0 1rem;
         }
+    }
+
+    &__inventory {
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        width: 50%;
     }
 
 }
