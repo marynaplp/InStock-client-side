@@ -1,6 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import HomePage from './pages/HomePage/HomePage';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element="HomePage" />;
+          <Route path="/" element={<HomePage/>} />;
           <Route path="/Warehouse" element="Warehouse-Detail" />;
           <Route path="/Edit-Warehouse" element="Edit-Warehouse" />;
           <Route path="/Add-Warehouse" element="Add-Warehouse" />;
