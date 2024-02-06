@@ -1,34 +1,70 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
 .header {
-    background-color: #232940;
+    background-color: $graphite;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    @include desktop {
+        padding: 2rem 7rem;
+    }
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+    }
 
     &__logo{
-        height: 5vh;
+        height: 13vh;
         padding-top: 1rem;
+
+        @include tablet {
+            padding: 0;
+        }
     }
 
     &__nav-bar {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        padding:1rem 0;
+        justify-content: space-around;
+        padding:1rem;
+
+        @include tablet {
+            gap: 1.5rem;
+            padding: 0;
+        }
     }
 
     &__nav-link {
-        color: #FFFFFF;
+        color: $white;
         font-size: 13px;
 
         &--inactive {
-            color: #bdc5d5;
+            color: $cloud;
+        }
+       
+        &:hover {
+            text-decoration: underline;
         }
     }
 
     &__active-nav-item {
-        background: #13182c;
+        background: $instock-black;
         height: 36px;
         display: flex;
         align-items: center;
         border-radius: 20px;
         padding: 0 3rem;
+
+        @include tablet {
+            padding: 0 1rem;
+        }
     }
 
 }
