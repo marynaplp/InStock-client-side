@@ -1,3 +1,55 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+.warehouse-list {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+
+    &__header {
+        margin: $mobile-margin;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        padding: 1.5rem 0;
+        margin: 0;
+    }
+
+    &__search-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__search {
+        border-radius: 20px;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $cloud;
+
+        @include tablet {
+            height: 2.375rem;
+            width: 25%;
+        }
+    }
+
+    &__button {
+        border-style: none;
+        color: $white;
+        font-weight: 600;;
+        background-color: $instock-indigo;
+        margin: 1rem 0;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+}

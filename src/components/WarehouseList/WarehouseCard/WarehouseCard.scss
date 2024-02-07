@@ -1,3 +1,7 @@
 @use '../../../styles/partials/variables' as *;
 @use '../../../styles/partials/mixins' as *;
 
+.warehouse-card {
+    padding: 1rem;
+    border-top: 1px solid $cloud;
+}
