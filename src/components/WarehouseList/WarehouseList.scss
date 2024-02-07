@@ -9,6 +9,15 @@
     top: -6.25rem;
     z-index: 10;
 
+    @include tablet {
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
     &__header {
         margin: $mobile-margin;
         display: flex;

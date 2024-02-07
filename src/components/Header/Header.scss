@@ -9,11 +9,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 2rem;
+            padding: 2rem 0;
+            margin: $tablet-margin;
         }
     
         @include desktop {
-            padding: 2rem 7rem;
+            margin: $desktop-margin;
+            width: 80%;
         }
     }
 

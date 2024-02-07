@@ -2,6 +2,34 @@
 @use '../../../styles/partials/mixins' as *;
 
 .warehouse-card {
-    padding: 1rem;
+    padding: 0 1.25rem;
     border-top: 1px solid $cloud;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    
+        &--left {
+            width: 50%;
+        }
+
+        &--right {
+            width: 50%;
+        }
+    }
+
+    &__header {
+        margin: 1rem 0 0.25rem 0;
+    }
+
+    &__icons {
+        padding: 1rem 0 1.25rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.p2 {
+    margin-bottom: 0.25rem;
 }
