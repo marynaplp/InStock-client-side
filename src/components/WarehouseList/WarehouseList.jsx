@@ -1,5 +1,6 @@
 import WarehouseCard from './WarehouseCard/WarehouseCard';
 import './WarehouseList.scss';
+import sort from '../../Assets/Icons/sort-24px.svg';
 
 function WarehouseList() {
     return (
@@ -12,10 +13,10 @@ function WarehouseList() {
                 </div>
             </div>
             <div className="warehouse-list__list-headers">
-                <h4 className="warehouse-list__row-heading row-warehouse">Warehouse</h4>
-                <h4 className="warehouse-list__row-heading row-address">Address</h4>
-                <h4 className="warehouse-list__row-heading row-name">Contact Name</h4>
-                <h4 className="warehouse-list__row-heading row-contact">Contact Information</h4>
+                <h4 className="warehouse-list__row-heading row-warehouse">Warehouse <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="warehouse-list__row-heading row-address">Address <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="warehouse-list__row-heading row-name">Contact Name <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="warehouse-list__row-heading row-contact">Contact Information <img className="sort-icon" src={sort} alt="Sort" /></h4>
                 <h4 className="warehouse-list__row-heading row-actions">Actions</h4>
             </div>
             <ul className="warehouse-list__list">

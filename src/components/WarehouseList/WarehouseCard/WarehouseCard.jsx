@@ -1,6 +1,8 @@
 import './WarehouseCard.scss';
 import trashcan from '../../../Assets/Icons/delete_outline-24px.svg';
+import chevron from '../../../Assets/Icons/chevron_right-24px.svg'
 import edit from '../../../Assets/Icons/edit-24px.svg';
+import { Link } from 'react-router-dom';
 
 function WarehouseCard() {
     return (
@@ -8,7 +10,9 @@ function WarehouseCard() {
             <div className="warehouse-card__container">
                 <div className="warehouse-card__container--left">
                     <h4 className="warehouse-card__header">Warehouse</h4>
-                    <p className="warehouse-card__location p2">Manhattan</p>
+                    <Link className="warehouse-card__location">
+                        <p className="p2">Manhattan</p> <img  src={chevron} alt="Manhattan" />
+                    </Link>
                     <h4 className="warehouse-card__header">Address</h4>
                     <p className="warehouse-card__street-address p2">503 Broadway, New York, USA</p>
                 </div>

@@ -77,11 +77,17 @@
             display: flex;
             padding: 0rem 2rem;
             gap: 1rem;
+            align-items: center;
         }
 
         @include desktop {
             gap: 2rem;
         }
+    }
+
+    &__row-heading {
+        display: flex;
+        align-items: center;
     }
 
     &__list {
@@ -110,6 +116,12 @@
 
     &-actions {
         width: 11%;
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
     }
+}
+
+.sort-icon {
+    height: 1rem;
+    margin-left: 0.5rem;
 }

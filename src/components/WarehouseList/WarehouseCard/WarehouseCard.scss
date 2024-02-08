@@ -18,7 +18,7 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 1.25rem;
 
         @include tablet {
             gap: 0;
@@ -37,7 +37,7 @@
             @include tablet {
                 display: flex;
                 align-items: center;
-                width: 44%;
+                width: 44.5%;
                 gap: 1rem;
             }
 
@@ -52,7 +52,7 @@
             @include tablet {
                 display: flex;
                 align-items: center;
-                width: 56%;
+                width: 55%;
                 gap: 1rem;
             }
 
@@ -91,6 +91,10 @@
 
 
     &__location {
+        text-decoration: none;
+        font-weight: 600;
+        color: $instock-indigo;
+        display: flex;
 
             @include tablet {
             width: 50%;
