@@ -19,20 +19,22 @@
 
         @include tablet {
             flex-direction: row;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            // padding-left: 2rem;
+            // padding-right: 2rem;
             margin-left: 2rem;
             margin-right: 2rem;
-            justify-content: space-around;
-
+            // justify-content: space-around;
+            justify-content: space-between;
         }
 
         @include desktop {
             flex-direction: row;
-            padding-left: 7rem;
-            padding-right: 7rem;
+            // padding-left: 7rem;
+            // padding-right: 7rem;
             margin-left: 7rem;
             margin-right: 7rem;
+            justify-content: space-between;
+            
         }
 
         &-section {
