@@ -66,6 +66,7 @@ button {
     padding: 0 1rem;
     width: 100%;
     border-radius: 20px;
+    border-style: none;
     font-family: $main-typeface;
 
     @include tablet {
