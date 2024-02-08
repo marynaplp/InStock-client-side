@@ -1,0 +1,56 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+
+.Edit{
+    
+
+    
+
+    &-icon{
+        width: 2.25rem;
+        height: 2.25rem;
+        background-color: $instock-indigo;
+        border-radius: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            gap: 4px;
+            display: flex;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 38px;
+            width:auto;
+        }
+    
+        @include desktop {
+            gap: 4px;
+            display: flex;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 38px;  
+            width:auto;
+        }
+    
+        &-back path{
+            fill: $white;
+        }
+        &-text{
+            display: none;
+            
+            @include tablet {
+                display: block;
+                color:white
+            }
+        
+            @include desktop {
+                display: block;
+                color:white
+            }
+        }
+    }
+
+
+}

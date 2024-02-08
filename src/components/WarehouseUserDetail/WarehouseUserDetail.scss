@@ -3,7 +3,12 @@
 
 
 .Warehouse {
-    background-color: $light-grey;
+    
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+   
+
 
     &__Detail {
         display: flex;
@@ -15,6 +20,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
         background-color: $white;
+        
 
 
         @include tablet {

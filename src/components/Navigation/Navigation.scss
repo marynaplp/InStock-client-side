@@ -2,7 +2,7 @@
 @use '../../styles/partials/mixins' as *;
 
 .navigation {
-    background-color: $light-grey;
+    
 
     &__card {
         background-color: $white;
@@ -13,6 +13,7 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 2px solid $cloud;
+        border-radius: 4px;
 
         @include tablet {
             margin-left: 2rem;
@@ -34,19 +35,7 @@
 &__edit{
     padding-right: 16px;
 
-    &-icon{
-        width: 2.25rem;
-        height: 2.25rem;
-        background-color: $instock-indigo;
-        border-radius: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        &-back path{
-            fill: $white;
-        }
-    }
 }
 
 }
