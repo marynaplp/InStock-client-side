@@ -1,0 +1,57 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+    
+.add-warehouse {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+
+    @include tablet {
+        margin: $tablet-margin;
+        padding: 2rem;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
+    &__header {
+        display: flex;
+        padding: 1.5rem 1rem 1rem 1rem;
+        border-bottom: 1px solid $cloud;
+    }
+}  
+
+.form {
+
+    &__warehouse {
+        border-bottom: 1px solid $cloud;
+        padding: 1rem;
+    }
+
+    &__contact {
+        padding: 1rem;
+    }
+
+    &__header {
+        padding-bottom: 1rem;
+    }
+
+    &__label {
+        padding-bottom: 0.5rem;
+    }
+
+    &__input {
+        padding-top: 1rem;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+}
+
