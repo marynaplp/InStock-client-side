@@ -11,6 +11,13 @@ function WarehouseList() {
                     <button className="warehouse-list__button">+ Add New Warehouse</button>
                 </div>
             </div>
+            <div className="warehouse-list__list-headers">
+                <h4 className="warehouse-list__row-heading row-warehouse">Warehouse</h4>
+                <h4 className="warehouse-list__row-heading row-address">Address</h4>
+                <h4 className="warehouse-list__row-heading row-name">Contact Name</h4>
+                <h4 className="warehouse-list__row-heading row-contact">Contact Information</h4>
+                <h4 className="warehouse-list__row-heading row-actions">Actions</h4>
+            </div>
             <ul className="warehouse-list__list">
                 <WarehouseCard />
             </ul>
