@@ -2,24 +2,37 @@
 @use '../../styles/partials/mixins' as *;
 
 .item {
-    padding: 1rem 1rem 0 1rem;
-    position: absolute;
-    top: 8rem;
-    z-index: 1;
+    padding: 0 1rem;
+    position: relative;;
+	top: -6.25rem;
+	z-index: 10;
+    right: 0;
+    left: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+        top: 6.4rem;
+    }
+
+    @include desktop {
+        padding: 0 8.125rem;
+    }
 
     &__container{
         background-color: $white;
         border-radius: 4px;
         box-shadow: 0px 2px 5px 0px #13182C1A;
-
-
     }
 
     &__header-container {
-        padding: 0 2rem;
+        padding: 2rem 2rem 1.5rem 2rem;
         display: flex;
         justify-content: space-between;
         border-bottom: $divider;
+
+        @include tablet {
+            padding: 2rem 2rem 1.313rem 2rem;
+        }
     }
 
     &__header-title {
@@ -33,15 +46,12 @@
         @include tablet {
             display: flex;
             padding: 1.5rem 0rem 2rem 2rem;
-            border-right: $divider;
             align-items: center;
         }
     }
 
     &__inventory-container {
         display: flex;
-        // justify-content: space-between;
-        // gap: 4rem;
     }
 
     &__title {

@@ -18,10 +18,8 @@ export default function Header() {
                         </div>
                     </nav>
                 </div>
-                <div className="header__extender">
-                </div>
+                <div className="header__extender"></div>
             </header>
         </>
     )
-
 }

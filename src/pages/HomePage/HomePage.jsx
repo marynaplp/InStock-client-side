@@ -5,7 +5,6 @@ import ItemDetails from "../../components/ItemDetails/ItemDetails";
 export default function HomePage() {
     return (
         <>
-            <Header/>
             <ItemDetails/>
         </>
     )
