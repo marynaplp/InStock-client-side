@@ -1,0 +1,110 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.item {
+    padding: 0 1rem;
+    position: relative;;
+	top: -4.25rem;
+	z-index: 10;
+    right: 0;
+    left: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+        top: -6.4rem;
+    }
+
+    @include desktop {
+        padding: 0 8.125rem;
+    }
+
+    &__container{
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px 0px #13182C1A;
+    }
+
+    &__header-container {
+        padding: 2rem 2rem 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: $divider;
+
+        @include tablet {
+            padding: 2rem 2rem 1.313rem 2rem;
+        }
+    }
+
+    &__header-title {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__info-container {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+        @include tablet {
+            display: flex;
+            padding: 1.5rem 0rem 2rem 2rem;
+            align-items: center;
+        }
+    }
+
+    &__inventory-container {
+        display: flex;
+    }
+
+    &__title {
+        color: $slate;
+        margin: 1rem 0 0.25rem 0;
+
+        &--active {
+            margin-top: 0;
+        }
+    }
+
+    &__data {
+        margin: 0;
+        font-size: 0.813rem;
+
+        &--active {
+            @include tablet {
+                width: 75%;
+            }
+        }
+    }
+
+    &__status {
+        color: $green;
+        margin:0;
+        background-color: rgba($green, 0.07);
+        border-radius: 1.25rem;
+        font-size: 0.688rem;
+        font-weight: 600;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__description-box {
+
+        @include tablet {
+            border-right: $divider;
+            flex: 1;
+        }
+    }
+
+    &__warehouse-info {
+
+        @include tablet {
+            padding-left: 2.5rem;
+            flex: 1;
+        }
+    }
+
+    &__inventory-status {
+        flex: 1;
+    }
+
+}
