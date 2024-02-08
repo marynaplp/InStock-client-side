@@ -1,0 +1,127 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.warehouse-list {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+
+    @include tablet {
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
+    &__header {
+        margin: $mobile-margin;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            padding: 2rem 2rem 0 2rem;
+            flex-direction: row;
+        }
+    }
+
+    &__title {
+        padding: 1.5rem 0;
+        margin: 0;
+    }
+
+    &__search-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet { 
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    &__search {
+        border-radius: 20px;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $cloud;
+
+        @include tablet {
+            height: 2.375rem;
+            width: 30%;
+            margin-right: 1rem;
+        }
+    }
+
+    &__button {
+        border-style: none;
+        color: $white;
+        font-weight: 600;;
+        background-color: $instock-indigo;
+        margin: 1rem 0;
+    }
+
+    &__list-headers {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            padding: 0rem 2rem;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @include desktop {
+            gap: 2rem;
+        }
+    }
+
+    &__row-heading {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.row {
+
+    &-warehouse {
+        width: 20%;
+    }
+
+    &-address {
+        width: 20%;
+    }
+
+    &-name {
+        width: 20%;
+    }
+
+    &-contact {
+        width: 30%;
+    }
+
+    &-actions {
+        width: 11%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.sort-icon {
+    height: 1rem;
+    margin-left: 0.5rem;
+}

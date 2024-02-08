@@ -9,13 +9,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 2rem;
+            padding: 2rem 0;
+            margin: $tablet-margin;
         }
-
+    
         @include desktop {
-            padding: 2rem 7rem;
+            margin: $desktop-margin;
+            width: 80%;
         }
-    }    
+    }
+
     &__logo-container {
         display: flex;
         justify-content: center;
@@ -34,7 +37,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 2rem 1rem 0 1rem;
+        padding:1rem;
 
         @include tablet {
             gap: 1.5rem;
@@ -44,6 +47,7 @@
 
     &__nav-link {
         color: $white;
+        font-size: 13px;
 
         &--inactive {
             color: $cloud;
@@ -56,11 +60,11 @@
 
     &__active-nav-item {
         background: $instock-black;
-        height: 2.25rem;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 1.25rem;
+        border-radius: 20px;
         width: 50%;
 
         @include tablet {
@@ -69,11 +73,11 @@
     }
 
     &__inventory {
-        height: 2.25rem;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 1.25rem;
+        border-radius: 20px;
         width: 50%;
     }
 
