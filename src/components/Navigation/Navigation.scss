@@ -1,2 +1,41 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.navigation {
+    
+
+    &__card {
+        background-color: $white;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid $cloud;
+        border-radius: 4px;
+
+        @include tablet {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        @include desktop {
+            margin-left: 7rem;
+            margin-right: 7rem;
+
+            
+        }
+    }
+&__link{
+    display: flex;
+    gap: 16px;
+    padding-left: 16px;
+}
+&__edit{
+    padding-right: 16px;
+
+
+}
+
+}
