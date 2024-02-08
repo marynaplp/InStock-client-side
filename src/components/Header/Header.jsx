@@ -3,7 +3,8 @@ import './Header.scss';
 
 export default function Header() {
     return (
-<header className="header">
+        <>
+            <header className="header">
                 <div className="header__container">
                     <nav className="header__logo-container">
                         <img src={logo} alt="instock-logo" className="header__logo"/>
@@ -19,6 +20,10 @@ export default function Header() {
                 </div>
                 <div className="header__extender">
                 </div>
-            </header>);
+            </header>
+            
+        </>
+        
+        )
 
 }
