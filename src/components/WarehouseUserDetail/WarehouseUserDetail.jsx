@@ -1,8 +1,10 @@
+import Navigation from "../Navigation/Navigation";
 import "./WarehouseUserDetail.scss";
 
 function WarehouseUserDetail() {
   return (
     <div className="Warehouse">
+      <Navigation/>
       <div className="Warehouse__Detail">
         <div className="Warehouse__Detail-address">
           <h4 className="Warehouse__Detail-header">warehouse address:</h4>
