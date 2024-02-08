@@ -13,9 +13,14 @@ body {
     background-color: $light-grey;
 }
 
+p {
+    margin: 0;
+}
+
 h1, h2, h3, h4 {
     font-family: $main-typeface;
     font-weight: 600;
+    margin: 0;
 }
 
 h1 {
@@ -57,9 +62,37 @@ button {
     padding: 0 1rem;
     width: 100%;
     border-radius: 20px;
+    font-family: $main-typeface;
 
     @include tablet {
         height: 2.375rem;
         width: fit-content;
+    }
+}
+
+// BODY LARGE
+.p1 {
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 0.938rem;
+    }
+}
+
+// BODY MEDIUM
+.p2 {
+    font-size: 0.875rem;
+
+    @include tablet {
+        font-size: 0.813rem;
+    }
+}
+
+// BODY SMALL
+.p3 {
+    font-size: 0.75rem;
+
+    @include tablet {
+        font-size: 0.688rem;
     }
 }

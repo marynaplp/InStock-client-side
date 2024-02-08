@@ -4,15 +4,19 @@
 .header {
     background-color: $graphite;
 
-    @include tablet {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2rem;
-    }
-
-    @include desktop {
-        padding: 2rem 7rem;
+    &__container {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+            margin: $tablet-margin;
+        }
+    
+        @include desktop {
+            margin: $desktop-margin;
+            width: 80%;
+        }
     }
 
     &__logo-container {
@@ -21,7 +25,7 @@
     }
 
     &__logo{
-        height: 13vh;
+        width: 8.037rem;
         padding-top: 1rem;
 
         @include tablet {
@@ -75,6 +79,12 @@
         justify-content: center;
         border-radius: 20px;
         width: 50%;
+    }
+
+    &__extender {
+        height: 6.25rem;
+        width: 100%;
+        position: relative;
     }
 
 }
