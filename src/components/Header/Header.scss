@@ -21,7 +21,7 @@
     }
 
     &__logo{
-        height: 13vh;
+        width: 8.037rem;
         padding-top: 1rem;
 
         @include tablet {
@@ -43,7 +43,6 @@
 
     &__nav-link {
         color: $white;
-        font-size: 13px;
 
         &--inactive {
             color: $cloud;
@@ -56,11 +55,11 @@
 
     &__active-nav-item {
         background: $instock-black;
-        height: 36px;
+        height: 2.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         width: 50%;
 
         @include tablet {
@@ -69,11 +68,11 @@
     }
 
     &__inventory {
-        height: 36px;
+        height: 2.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         width: 50%;
     }
 

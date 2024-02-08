@@ -1,0 +1,55 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.item-details {
+    padding: 1rem 1rem 0 1rem;
+
+    &__container{
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px 0px #13182C1A;
+
+    }
+
+    &__header-container {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $cloud;
+    }
+
+    &__header-title {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__info-container {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    &__inventory-container {
+        display: flex;
+        // justify-content: space-between;
+        gap: 4rem;
+    }
+
+    &__title {
+        color: $slate;
+        margin: 1rem 0 0.25rem 0;
+    }
+
+    &__data {
+        margin: 0;
+        font-size: 0.813rem;
+    }
+
+    &__data-status {
+        color: $green;
+        margin:0;
+        background-color: rgba($green, 0.07);
+        border-radius: 1.25rem;
+        padding: 4px 8px 4px 8px;
+        font-size: 0.688rem;
+        font-weight: 600;
+    }
+}
