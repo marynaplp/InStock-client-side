@@ -1,0 +1,111 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+    
+.add-warehouse {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+
+    @include tablet {
+        margin: $tablet-margin;
+        padding: 2rem;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
+    &__header {
+        display: flex;
+        padding: 1.5rem 1rem 1rem 1rem;
+        border-bottom: 1px solid $cloud;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+}  
+
+.form {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__warehouse {
+        border-bottom: 1px solid $cloud;
+        padding: 1rem;
+        width: 100%;
+
+        @include tablet {
+            border-bottom: none;
+            border-right: 1px solid $cloud;
+            padding-top: 0;
+            margin-top: 1.5rem
+        }
+    }
+
+    &__contact {
+        padding: 1rem;
+        width: 100%;
+
+        @include tablet {
+            padding-top: 0;
+            margin-top: 1.5rem
+        }
+    }
+
+    &__header {
+        padding-bottom: 1rem;
+    }
+
+    &__label {
+        padding-bottom: 0.5rem;
+    }
+
+    &__input {
+        padding-top: 1rem;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+
+    // BUTTONS
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+    }
+
+    &__cancel {
+        border: 1px solid $cloud;
+        color: $slate;
+        background-color: $white;
+        font-weight: 600;
+    }
+
+    &__add {
+        background-color: $instock-indigo;
+        color: $white;
+        font-weight: 600;
+    }
+
+}
+
