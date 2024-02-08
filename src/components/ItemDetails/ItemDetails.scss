@@ -4,14 +4,14 @@
 .item {
     padding: 0 1rem;
     position: relative;;
-	top: -6.25rem;
+	top: -4.25rem;
 	z-index: 10;
     right: 0;
     left: 0;
 
     @include tablet {
         padding: 0 2rem;
-        top: 6.4rem;
+        top: -6.4rem;
     }
 
     @include desktop {

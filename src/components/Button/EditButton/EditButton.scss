@@ -4,9 +4,6 @@
 
 .Edit{
     
-
-    
-
     &-icon{
         width: 2.25rem;
         height: 2.25rem;
@@ -19,18 +16,18 @@
         @include tablet {
             gap: 4px;
             display: flex;
-            padding-left: 16px;
-            padding-right: 16px;
-            height: 38px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            height: 2.375rem;
             width:auto;
         }
     
         @include desktop {
             gap: 4px;
             display: flex;
-            padding-left: 16px;
-            padding-right: 16px;
-            height: 38px;  
+            padding-left: 1rem;
+            padding-right: 1rem;
+            height: 2.375rem;  
             width:auto;
         }
     
@@ -42,12 +39,12 @@
             
             @include tablet {
                 display: block;
-                color:white
+                color: $white;
             }
         
             @include desktop {
                 display: block;
-                color:white
+                color:$white;
             }
         }
     }

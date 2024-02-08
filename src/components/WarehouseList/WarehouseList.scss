@@ -47,7 +47,7 @@
     }
 
     &__search {
-        border-radius: 20px;
+        border-radius: $border-radius;
         color: $slate;
         font-family: $main-typeface;
         height: 2.25rem;

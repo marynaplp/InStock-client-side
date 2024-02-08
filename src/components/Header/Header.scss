@@ -46,7 +46,7 @@
 
     &__nav-link {
         color: $white;
-        font-size: 13px;
+        font-size: 0.813rem;
 
         &--inactive {
             color: $cloud;
@@ -59,11 +59,11 @@
 
     &__active-nav-item {
         background: $instock-black;
-        height: 36px;
+        height: 2.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: $border-radius;
         width: 50%;
 
         @include tablet {
@@ -72,11 +72,11 @@
     }
 
     &__inventory {
-        height: 36px;
+        height: 2.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: $border-radius;
         width: 50%;
     }
 

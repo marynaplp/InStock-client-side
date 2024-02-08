@@ -1,6 +1,7 @@
 import './ItemDetails.scss';
 import editIcon from '../../Assets/Icons/edit-24px.svg';
 import arrowIcon from '../../Assets/Icons/arrow_back-24px.svg';
+import EditButton from '../Button/EditButton/EditButton';
 
 export default function ItemDetails() {
     return (
@@ -11,7 +12,7 @@ export default function ItemDetails() {
                         <img src={arrowIcon} alt='arrow-icon' />
                         <h1>Television</h1>
                     </div>
-                    <img src={editIcon} alt='edit-icon'/>
+                    <EditButton/>
                 </section>
                 <section className='item__info-container'>
                     <div className='item__description-box'>
