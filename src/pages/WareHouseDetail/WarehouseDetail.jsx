@@ -4,7 +4,6 @@ import WarehouseUserDetail from '../../components/WarehouseUserDetail/WarehouseU
 export default function WarehouseDetail() {
     return (
         <>
-            <Header/>
             <WarehouseUserDetail/>
         </>
     )
