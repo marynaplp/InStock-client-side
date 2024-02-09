@@ -5,7 +5,7 @@ function AddWarehouse() {
     return (
         <main className="add-warehouse">
             <section className="add-warehouse__header">
-                <h1 className="add-warehouse__title"><img src={back} /> Add New Warehouse</h1>
+                <h1 className="add-warehouse__title"><img src={back} alt="arrow-back"/> Add New Warehouse</h1>
             </section>
 
             {/* FORM BEGINS HERE */}
