@@ -8,6 +8,7 @@ import WarehouseDetail from './pages/WareHouseDetail/WarehouseDetail';
 import AddWarehousePage from './pages/AddWarehousePage/AddWarehousePage';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import AddInventory from './components/AddInventory/AddInventory';
+import EditWarehousePage from './pages/EditWarehousePage/EditWarehousePage';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Route path="/" element={<HomePage/>} />;
           <Route path="/Warehouse" element={<WarehouseListPage />} />;
           <Route path="/WarehouseDetail" element={<WarehouseDetail/>} />;
-          <Route path="/Edit-Warehouse" element="Edit-Warehouse" />;
+          <Route path="/EditWarehouse" element={<EditWarehousePage/>} />;
           <Route path="/Add-Warehouse" element={<AddWarehousePage />} />;
           <Route path="/Delete-Warehouse" element="Delete-Warehouse" />;
           <Route path="/Inventory-Item" element={<ItemDetails/>} />;
