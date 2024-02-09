@@ -55,7 +55,9 @@
         }
 
         &--left {
+            @include tablet {
             padding-right: 0;
+            }
         }
     }
 
