@@ -36,7 +36,6 @@ export default function AddInventory() {
                         <label htmlFor='category'>
                             <h3>Category</h3>
                         </label>
-                        {/* <input type='text' name='category' id='category' placeholder="Please select" /> */}
                         <div className='add-inventory__select-menu'>
                             <select className='add-inventory__select'>
                                 <option value="">Please select</option>
@@ -76,7 +75,14 @@ export default function AddInventory() {
                         <label htmlFor='warehouse'>
                             <h3>Warehouse</h3>
                         </label>
-                        <input type='text' name='warehouse' id='warehouse' placeholder="Please select" />
+                        <div className='add-inventory__select-menu'>
+                            <select className='add-inventory__select'>
+                                <option value="">Please select</option>
+                                <option>2</option>
+                                <option>1</option>
+                                <option>1</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div className="add-inventory__button-container">
