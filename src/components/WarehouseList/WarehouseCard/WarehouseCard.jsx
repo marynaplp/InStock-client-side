@@ -7,9 +7,9 @@ import edit from '../../../Assets/Icons/edit-24px.svg';
 import { Link } from 'react-router-dom';
 import React,{useState} from 'react';
 
-function WarehouseCard({ warehouseId, warehouseName }) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
+function WarehouseCard({ warehouse }) {
+      const [isModalOpen, setIsModalOpen] = useState(false);
     const renderModal = (isOpen, onClose) => (
         <DeleteWarehouseModal
         isOpen={isOpen}
@@ -18,28 +18,30 @@ function WarehouseCard({ warehouseId, warehouseName }) {
              //warehouseName={warehouse.name}
         />
     );
-    const handleMockDelete = () => {
+   const handleMockDelete = () => {
         console.log("Mock delete action executed.");
         setIsModalOpen(false); 
       };
+
+
     return (
         <section className="warehouse-card">
             <div className="warehouse-card__container">
                 <div className="warehouse-card__container--left">
                     <h4 className="warehouse-card__header">Warehouse</h4>
-                    <Link className="warehouse-card__location">
-                        <p className="p2">Manhattan</p> <img  src={chevron} alt="Manhattan" />
+                    <Link className="warehouse-card__location" to={`/WarehouseDetail/${warehouse.id}`}>
+                        <p className="p2">{warehouse.warehouse_name}</p> <img  src={chevron} alt={warehouse.warehouse_name} />
                     </Link>
                     <h4 className="warehouse-card__header">Address</h4>
-                    <p className="warehouse-card__street-address p2">503 Broadway, New York, USA</p>
+                    <p className="warehouse-card__street-address p2">{warehouse.address}, {warehouse.city}, {warehouse.country}</p>
                 </div>
                 <div className="warehouse-card__container--right">
                     <h4 className="warehouse-card__header">Contact Name</h4>
-                    <p className="warehouse-card__name p2">Parmin Aujla</p>
+                    <p className="warehouse-card__name p2">{warehouse.contact_name}</p>
                     <h4 className="warehouse-card__header">Contact Information</h4>
                     <div className="warehouse-card__contact">
-                        <p className="warehouse-card__phone p2">+1 629-555-0129</p>
-                        <p className="warehouse-card__email p2">paujla@instock.com</p>
+                        <p className="warehouse-card__phone p2">{warehouse.contact_phone}</p>
+                        <p className="warehouse-card__email p2">{warehouse.contact_email}</p>
                     </div>
                 </div>
             </div>
