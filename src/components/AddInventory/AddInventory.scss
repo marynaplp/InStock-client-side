@@ -1,0 +1,112 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.add-inventory {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -4.25rem;
+    z-index: 10;
+    box-shadow: 0px 2px 5px 0px rgba($instock-black, 0.10);
+
+    
+    &__header {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    // &__title {
+        
+    // }
+
+    &__form-container{
+        padding: 1rem 1.5rem;
+        border-top: $divider;
+        
+    }
+
+    &__form-input {
+        padding-top: 1rem;
+    }
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        background-color: $light-grey;
+        padding: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+    }
+
+    &__cancel {
+        border: 1px solid $cloud;
+        color: $slate;
+        background-color: $white;
+        font-weight: 600;
+    }
+
+    &__add {
+        background-color: $instock-indigo;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &__status-container {
+        display: flex;
+    }
+
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__radio-btn {
+        border: 1px solid $cloud;
+        height: 1rem;
+        width: 10%;
+    }
+
+    &__select {
+        border-radius: 20px;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        width: 100%;
+        padding-left:10px;
+        border: 1px solid $cloud;
+    }
+
+    // &__select {
+    //     width: 100%;
+    // }
+}
+
+
+// #description {
+   
+// }
+
+.MuiFormGroup-root.css-dmmspl-MuiFormGroup-root {
+        display: flex;
+        flex-direction: row;
+}
+
+.css-j204z7-MuiFormControlLabel-root{
+    flex: 1;
+}
+
+.css-ahj2mt-MuiTypography-root.MuiFormControlLabel-label {
+    font-family: $main-typeface;
+    font-size: 13px;
+}
+
+// .drop-down__select {
+//     width: 100%;
+// }
