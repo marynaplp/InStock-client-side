@@ -26,8 +26,13 @@ function App() {
           <Route path="/Edit-Warehouse" element="Edit-Warehouse" />;
           <Route path="/Add-Warehouse" element={<AddWarehousePage />} />;
           <Route path="/Delete-Warehouse" element="Delete-Warehouse" />;
+
           <Route path="/Inventory-Item" element={<ItemDetails/>} />;
           <Route path="/Edit-Inventory" element="Edit-Inventory" />;
+
+          <Route path="/Add-Inventory" element="Add-Inventory" />;
+           <Route path="/Delete-Inventory" element="Delete-Inventory" />;
+          <Route path="/Delete-Inventory" element="Delete-Inventory-non" /> 
           <Route path="/Add-Inventory" element={<AddInventory/>} />;
           <Route path="/Delete-Inventory" element="Delete-Inventory" />;
           <Route path="/Delete-Inventory" element="Delete-Inventory-non" />;

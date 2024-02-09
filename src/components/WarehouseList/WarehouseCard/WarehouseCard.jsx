@@ -1,10 +1,28 @@
 import './WarehouseCard.scss';
-import trashcan from '../../../Assets/Icons/delete_outline-24px.svg';
+import DeleteWarehouseModal from "../../DeleteWarehouseModal/deleteWarehouseModal"
+import DeleteButton from "../../Button/DeleteButton/deleteButton"
+//import trashcan from '../../../Assets/Icons/delete_outline-24px.svg';
 import chevron from '../../../Assets/Icons/chevron_right-24px.svg'
 import edit from '../../../Assets/Icons/edit-24px.svg';
 import { Link } from 'react-router-dom';
+import React,{useState} from 'react';
+
 
 function WarehouseCard({ warehouse }) {
+      const [isModalOpen, setIsModalOpen] = useState(false);
+    const renderModal = (isOpen, onClose) => (
+        <DeleteWarehouseModal
+        isOpen={isOpen}
+        onClose={onClose}
+        onDelete={handleMockDelete}
+             //warehouseName={warehouse.name}
+        />
+    );
+   const handleMockDelete = () => {
+        console.log("Mock delete action executed.");
+        setIsModalOpen(false); 
+      };
+
 
     return (
         <section className="warehouse-card">
@@ -28,7 +46,7 @@ function WarehouseCard({ warehouse }) {
                 </div>
             </div>
             <div className="warehouse-card__icons">
-                <img className="warehouse-card__trashcan" src={trashcan} alt="Delete Warehouse" />
+                <DeleteButton onClick={() => setIsModalOpen(true)} renderModal={renderModal} />
                 <img className="warehouse-card__edit" src={edit} alt="Edit Warehouse" />
             </div>
         </section>
