@@ -22,6 +22,8 @@ function App() {
           <Route path="/Warehouse" element={<WarehouseListPage />} />;
           <Route path="/WarehouseDetail" element={<WarehouseDetail/>} />;
           <Route path="/EditWarehouse" element={<EditWarehousePage/>} />;
+          <Route path="/WarehouseDetail/:warehouseId" element={<WarehouseDetail/>} />;
+          <Route path="/Edit-Warehouse" element="Edit-Warehouse" />;
           <Route path="/Add-Warehouse" element={<AddWarehousePage />} />;
           <Route path="/Delete-Warehouse" element="Delete-Warehouse" />;
           <Route path="/Inventory-Item" element={<ItemDetails/>} />;
