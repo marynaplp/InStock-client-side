@@ -10,22 +10,64 @@
     z-index: 10;
     box-shadow: 0px 2px 5px 0px rgba($instock-black, 0.10);
 
+    @include tablet {
+        top: -6.6rem;
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        top: -14.6rem;
+        margin: 8.125rem;
+    }
+
+    &__form {
+        @include tablet {
+            display: flex;
+        }
+    }
     
     &__header {
         display: flex;
         align-items: baseline;
         gap: 0.5rem;
         padding: 2rem 1.5rem 1.5rem 1.5rem;
+
+        @include tablet {
+            padding: 2rem 2rem 1.313rem 2rem;
+        }
+
+        @include desktop {
+            padding: 2rem 2.5rem 1.313rem 2.5rem;
+        }
     }
 
-    // &__title {
-        
-    // }
-
     &__form-container{
-        padding: 1rem 1.5rem;
+        padding: 1.5rem;
         border-top: $divider;
-        
+
+        @include tablet {
+            flex: 1;
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+        }
+
+        &--left {
+            padding-right: 0;
+        }
+    }
+
+    &__divider {
+        @include tablet {
+            border-right: $divider;
+            padding-right: 2rem;
+        }
+
+        @include desktop {
+            padding-right: 2.5rem;
+        }
     }
 
     &__form-input {
@@ -57,6 +99,10 @@
         font-weight: 600;
     }
 
+    &__label {
+        padding-bottom: 4px;
+    }
+
     &__status-container {
         display: flex;
     }
@@ -77,7 +123,8 @@
         position: relative;
         width: 100%;
         overflow: hidden;
-        background: url('../../Assets/Icons/arrow_drop_down-24px.svg') no-repeat right center;
+        background: url('../../Assets/Icons/arrow_drop_down-24px.svg') no-repeat 98%;
+        
     }
 
     &__select {
@@ -96,16 +143,6 @@
     }
 }
 
-.MuiFormGroup-root.css-dmmspl-MuiFormGroup-root {
-        display: flex;
-        flex-direction: row;
-}
-
-.css-j204z7-MuiFormControlLabel-root{
-    flex: 1;
-}
-
-.css-ahj2mt-MuiTypography-root.MuiFormControlLabel-label {
-    font-family: $main-typeface;
-    font-size: 13px;
+#description {
+    padding: 1rem 0.75rem 5.75rem 0.75rem;
 }
