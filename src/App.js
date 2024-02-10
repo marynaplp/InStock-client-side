@@ -9,12 +9,9 @@ import AddWarehousePage from './pages/AddWarehousePage/AddWarehousePage';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import AddInventory from './components/AddInventory/AddInventory';
 import EditWarehousePage from './pages/EditWarehousePage/EditWarehousePage';
-<<<<<<< HEAD
 // import InventoryList from './components/InventoryList/InventoryList';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
-=======
 import EditInventory from './components/EditInventory/EditInventory'
->>>>>>> develop
 
 function App() {
   return (
