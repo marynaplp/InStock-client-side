@@ -4,7 +4,7 @@ import arrowIcon from '../../Assets/Icons/arrow_back-24px.svg';
 import EditButton from '../Button/EditButton/EditButton';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export default function ItemDetails() {
 
@@ -35,10 +35,12 @@ export default function ItemDetails() {
         <section className='item'>
             <div className='item__container'>
                 <section className='item__header-container'>
-                    <div className='item__header-title'>
-                        <img src={arrowIcon} alt='arrow-icon' />
-                        <h1>Television</h1>
-                    </div>
+                    <Link to={`/inventory`}>
+                        <div className='item__header-title'>
+                            <img src={arrowIcon} alt='arrow-icon' />
+                            <h1 className='item__item-title'>Television</h1>
+                        </div>
+                    </Link>
                     <EditButton/>
                 </section>
                 <section className='item__info-container'>
