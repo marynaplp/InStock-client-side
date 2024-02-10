@@ -1,0 +1,38 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.inventory-list {
+
+    &__search-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__search {
+        flex: 1;
+        background-image: url('../../Assets/Icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: 98%;
+        border-radius: $border-radius;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $cloud;
+
+        @include tablet {
+            height: 2.375rem;
+            width: 30%;
+            margin-right: 1rem;
+        }
+    }
+   
+    &__button {
+        border-style: none;
+        color: $white;
+        font-weight: 600;;
+        background-color: $instock-indigo;
+        margin: 1rem 0;
+    }
+}
