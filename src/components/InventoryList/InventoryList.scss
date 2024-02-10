@@ -100,43 +100,7 @@
     &__row-heading {
         display: flex;
         align-items: center; 
-        // flex-grow: 1;
-        // flex-shrink: 0;
         text-align: center;
         padding: 0.688rem 0;
-
-        &--gap {
-            flex: 2;
-        }
-
     }
 }
-
-// .row {
-
-//     &-item {
-//         width: 20%;
-//     }
-
-//     &-category {
-//         width: 20%;
-//     }
-
-//     &-status {
-//         width: 20%;
-//     }
-
-//     &-quantity {
-//         width: 30%;
-//     }
-
-//     &-warehouse {
-//         width: 30%;
-//     }
-
-//     &-actions {
-//         width: 11%;
-//         display: flex;
-//         justify-content: flex-end;
-//     }
-// }
