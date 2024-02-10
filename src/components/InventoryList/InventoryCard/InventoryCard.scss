@@ -12,6 +12,10 @@
             padding:0 2rem;
             
         }
+
+        &:hover {
+            background-color: rgba($instock-indigo, 10%);
+        }
     }
     
     &__container-info {
@@ -35,14 +39,6 @@
         align-items: center;
         color: $instock-indigo;
         font-weight: 600;
-
-        @include tablet {
-            width: 58%;
-        }
-
-        @include desktop {
-            width: 55%;
-        }
     }
 
     &__icons {
@@ -131,5 +127,18 @@
             background-color: rgba($red, 0.07);
             width: 7rem;
         }
+    }
+}
+
+a {
+    text-decoration: none;
+    width: 58%;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include desktop {
+        width: 55%;
     }
 }
