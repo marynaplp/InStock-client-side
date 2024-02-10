@@ -1,6 +1,6 @@
 // DeleteInventoryModal.js
 import React from 'react';
-import './deleteInventoryModal.css'; 
+import "./deleteInventorModal.scss"
 
 const DeleteInventoryModal = ({ isOpen, onClose, onDelete, itemName }) => {
   if (!isOpen) return null; 
