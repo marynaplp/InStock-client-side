@@ -74,15 +74,6 @@ export default function EditInventory() {
               </div>
             </div>
             <div className="Edit-inventory__form-input">
-              <h3 className="Edit-inventory__label">Quantity</h3>
-              <input
-                type="text"
-                name="quantity"
-                id="quantity"
-                placeholder="0"
-              />
-            </div>
-            <div className="Edit-inventory__form-input">
               <label htmlFor="warehouse">
                 <h3 className="Edit-inventory__label">Warehouse</h3>
               </label>
