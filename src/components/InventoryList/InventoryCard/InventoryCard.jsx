@@ -17,7 +17,7 @@ export default function InventoryCard({item}) {
                     <h4 className="inventory-card__header">CATEGORY</h4>
                     <p className="inventory-card__item">{item.category}</p>
                 </div>
-                <div className="inventory-card__container-info">
+                <div className="inventory-card__container-info inventory-card__container-info--inactive ">
                     <div className='inventory-card__status-container'>
                     <h4 className="inventory-card__header">Status</h4>
                     <p className={`inventory-card__item-status ${item.status === 'Out of Stock' ? 'inventory-card__item-status--out-of-stock' : ''}`}>

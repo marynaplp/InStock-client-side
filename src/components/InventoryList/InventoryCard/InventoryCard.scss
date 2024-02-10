@@ -15,9 +15,13 @@
         @include tablet {
             display: flex;
             align-items: center;
-            flex-grow: 0.6;
-            flex-shrink: 1;
-            flex-basis: 0%;
+            flex:1.2;
+        }
+
+        &--inactive {
+            @include tablet {
+                flex: 2;
+            }
         }
     }
 
@@ -26,7 +30,7 @@
         align-items: center;
 
         @include tablet {
-            width: 40%;
+            width: 55%;
         }
     }
 
@@ -58,14 +62,14 @@
 
         &--active {
             @include tablet {
-                flex: 1;
+                flex: 0.3;
             }
         }
     }
 
     &__status-container {
         @include tablet {
-            flex: 1;
+            flex: 0.4;
         }
     }
 
