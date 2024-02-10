@@ -18,7 +18,7 @@ function WarehouseList() {
                 const response = await axios.get(url)
                 setAllWarehouses(response.data)
             } catch(err) {
-                alert.window("Error: No warehouse with that id exists.", err)
+                alert("Error: No warehouse with that id exists.", err)
             }
         }
         getAllWarehouses();

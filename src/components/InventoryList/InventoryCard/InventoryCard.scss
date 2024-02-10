@@ -1,0 +1,135 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+.inventory-card {
+
+    &__list-container{
+        display: flex;
+        padding: 0 1.5rem;
+        border-top: 1px solid $cloud;
+
+        @include tablet {
+            padding:0 2rem;
+            
+        }
+    }
+    
+    &__container-info {
+        flex: 1;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            flex:1.25;
+        }
+
+        &--inactive {
+            @include tablet {
+                flex: 1.5;
+            }
+        }
+    }
+
+    &__inventory-item {
+        display: flex;
+        align-items: center;
+        color: $instock-indigo;
+        font-weight: 600;
+
+        @include tablet {
+            width: 58%;
+        }
+
+        @include desktop {
+            width: 55%;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+        @include tablet {
+            justify-content: flex-end;
+            padding: 0;
+            gap: 1rem;
+        }
+
+        &--tablet {
+            display: none;
+
+            @include tablet {
+                display: flex;
+            }
+        }
+
+        &--mobile {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__header {
+        padding-top: 1rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__item {
+        font-size: 0.813rem;
+        padding-top: 0.25rem;
+        
+        @include tablet {
+            padding: 1.125rem 0;
+            font-size: 0.875rem;
+        }
+
+        &--active {
+            @include tablet {
+                flex: 0.25;
+            }
+
+            @include desktop {
+                flex: 0.3;
+            }
+        }
+    }
+
+    &__status-container {
+        @include tablet {
+            flex: 0.4;
+        }
+
+        @include desktop {
+            flex: 0.35;
+        }
+    }
+
+    &__item-status {
+        color: $green;
+        background-color: rgba($green, 0.07);
+        border-radius: 1.25rem;
+        font-size: 0.813rem;
+        font-weight: 600;
+        width: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.25rem;
+        padding: 0.25rem 0.5rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+        }
+
+        &--out-of-stock{
+            color: $red;
+            background-color: rgba($red, 0.07);
+            width: 7rem;
+        }
+    }
+}
