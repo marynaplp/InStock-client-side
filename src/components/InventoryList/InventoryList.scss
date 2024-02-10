@@ -55,4 +55,45 @@
         background-color: $instock-indigo;
         margin: 1rem 0;
     }
+
+    &__list-headers {
+        display: flex;
+    }
+
+    &__row-heading {
+        display: flex;
+        flex: 0.4;
+        // padding: 0rem 2rem;
+        // gap: 1rem;
+        // align-items: center;
+    }
 }
+
+// .row {
+
+//     &-item {
+//         width: 20%;
+//     }
+
+//     &-category {
+//         width: 20%;
+//     }
+
+//     &-status {
+//         width: 20%;
+//     }
+
+//     &-quantity {
+//         width: 30%;
+//     }
+
+//     &-warehouse {
+//         width: 30%;
+//     }
+
+//     &-actions {
+//         width: 11%;
+//         display: flex;
+//         justify-content: flex-end;
+//     }
+// }
