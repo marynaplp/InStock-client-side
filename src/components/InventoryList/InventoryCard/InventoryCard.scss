@@ -1,0 +1,25 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+.inventory-card {
+
+    &__list-container{
+        display: flex;
+        padding: 1.5rem;
+        border-top: 1px solid $cloud;
+    }
+
+    &__container-info {
+        flex: 1;
+    }
+
+    &__inventory-item {
+        display: flex;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+}

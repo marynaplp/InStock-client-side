@@ -2,10 +2,30 @@
 @use '../../styles/partials/mixins' as *;
 
 .inventory-list {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -4.25rem;
+    z-index: 10;
+
+    @include tablet {
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
+    &__page-title {
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
 
     &__search-container {
         display: flex;
         flex-direction: column;
+        padding: 1rem 1.5rem;
     }
 
     &__search {
