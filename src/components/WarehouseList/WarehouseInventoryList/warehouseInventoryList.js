@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DeleteInventoryModal from '../DeleteInventoryModal/deleteInventoryModal';
+// import DeleteInventoryModal from '../DeleteInventoryModal/deleteInventoryModal';
 import './warehouseInventoryList.scss'; 
 
 function WarehouseInventoryList({ inventoryItems,onDeleteItem, onEditItem }) {

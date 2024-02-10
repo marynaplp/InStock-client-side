@@ -1,5 +1,5 @@
 import React from "react";
-import "./deleteWarehouseModal.css"
+import "./deleteWarehouseModal.scss"
 
 const DeleteWarehouseModal = ({ isOpen, onClose, onDelete, warehouseName }) => {
   if (!isOpen) return null;
