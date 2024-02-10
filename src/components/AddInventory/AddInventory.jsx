@@ -1,7 +1,75 @@
+import { useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import arrowIcon from '../../Assets/Icons/arrow_back-24px.svg';
 import './AddInventory.scss';
+import axios from 'axios';
 
 export default function AddInventory() {
+    
+    const { REACT_APP_API_BASE_PATH } = process.env;
+    // const formRef = useRef()
+    const [inventory, setInventory] = useState([])
+    const navigate = useNavigate()
+
+    // const handleClick = (e) => {
+    //     e.preventDefault()
+    // }
+
+    // const addInventory = async (e) => {
+    //     e.preventDefault()
+    //     const newInventoryData = {
+    //         itemName: formRef.current.itemName.value,
+    //         description: formRef.current.description.value,
+    //     }
+    //     e.target.reset()
+    //     try {
+    //         const url = `${REACT_APP_API_BASE_PATH}/EditInventory}`
+    //         let newInventory = await axios.post(url, newInventoryData)
+    //         setInventory([...inventory, newInventory])
+    //         navigate('/inventory')
+    //     } catch(error) {
+    //         console.error(error)
+    //     }
+    // }
+
+    const [ categoryOptions, setCategoryOptions ] = useState([])
+    const [ warehouseOptions, setWarehouseOptions ] = useState([])
+
+    useEffect(() => {
+        const url = `${REACT_APP_API_BASE_PATH}/inventory`
+        const getAllInventories = async() => {
+            try {
+                const response = await axios.get(url)
+                // 1. Get array of categories
+
+                const categories = response.data.map((inventory) => {
+                    return inventory.category
+                })
+
+
+                const warehouses = response.data.map((inventory) => {
+                    return inventory.warehouse_name
+                })
+
+                // 2. Put array of categories in a Set
+
+                const categorySet = new Set(categories)
+                const warehouseSet = new Set(warehouses)
+
+                // 3. Transform it back to array
+
+
+                setCategoryOptions([...categorySet]) 
+                setWarehouseOptions([...warehouseSet])
+            } catch(error) {
+                alert("Error: No inventory with that id exists.", error)
+            }
+        }
+        getAllInventories()
+    }, [])
+
+
     return(
         <main className="add-inventory">
             <section className="add-inventory__header">
@@ -31,9 +99,9 @@ export default function AddInventory() {
                             <div className='add-inventory__select-menu'>
                                 <select className='add-inventory__select'>
                                     <option value="">Please select</option>
-                                    <option>2</option>
-                                    <option>1</option>
-                                    <option>1</option>
+                                    {categoryOptions.map((option, index) => (
+                                        <option key={index} value={option}>{option}</option>
+                                    ))}
                                 </select>
                             </div>
                         </div>
@@ -45,7 +113,7 @@ export default function AddInventory() {
                         <h3 className='add-inventory__label'>Status</h3>
                         <div className='add-inventory__status-container'>
                             <label className='add-inventory__radio-container'>
-                                <input type='radio'className='add-inventory__radio-btn' checked/> In stock
+                                <input type='radio'className='add-inventory__radio-btn'/> In stock
                             </label>
                             <label className='add-inventory__radio-container'>
                                 <input type='radio' className='add-inventory__radio-btn'/> Out of stock
@@ -63,9 +131,9 @@ export default function AddInventory() {
                         <div className='add-inventory__select-menu'>
                             <select className='add-inventory__select'>
                                 <option value="">Please select</option>
-                                <option>2</option>
-                                <option>1</option>
-                                <option>1</option>
+                                    {warehouseOptions.map((warehouse, index) => (
+                                        <option key={index} value={warehouse}>{warehouse}</option>
+                                ))}
                             </select>
                         </div>
                     </div>

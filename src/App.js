@@ -33,9 +33,7 @@ function App() {
           <Route path="/Inventory" element={<InventoryPage/>} />;
           <Route path="/Inventory/:inventoryId" element={<ItemDetails/>} />;
          
-
-          <Route path="/Add-Inventory" element="Add-Inventory" />;
-           <Route path="/Delete-Inventory" element="Delete-Inventory" />;
+          <Route path="/Delete-Inventory" element="Delete-Inventory" />;
           <Route path="/Delete-Inventory" element="Delete-Inventory-non" /> 
           <Route path="/Add-Inventory" element={<AddInventory/>} />;
           <Route path="/Delete-Inventory" element="Delete-Inventory" />;
