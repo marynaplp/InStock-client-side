@@ -11,6 +11,7 @@
 
     @include tablet {
         margin: $tablet-margin;
+        top: -5.9rem;
     }
 
     @include desktop {
@@ -18,14 +19,38 @@
         width: 80%;
     }
 
+    &__header {
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    &__list {
+        padding-left: 0;
+        margin: 0;
+    }
+
     &__page-title {
         padding: 2rem 1.5rem 0 1.5rem;
+
+        @include tablet {
+            padding: 0 0 0 2rem;
+            flex: 1;
+        }
     }
 
     &__search-container {
         display: flex;
         flex-direction: column;
         padding: 1rem 1.5rem;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            padding: 2rem 2rem 1.5rem 0;
+            flex: 1;
+        }
     }
 
     &__search {
@@ -43,7 +68,6 @@
 
         @include tablet {
             height: 2.375rem;
-            width: 30%;
             margin-right: 1rem;
         }
     }
@@ -54,19 +78,37 @@
         font-weight: 600;;
         background-color: $instock-indigo;
         margin: 1rem 0;
+
+        @include tablet {
+            margin: 0;
+        }
     }
 
     &__list-headers {
-        display: flex;
+        display: none;
+
+        @include tablet {
+            display: flex;
+            align-items: center; 
+            padding: 0 2rem;
+            justify-content: space-between; 
+            background-color: rgba($light-grey, 0.7);
+        }
+
     }
 
     &__row-heading {
         display: flex;
-        flex: 0.4;
-    
-        // padding: 0rem 2rem;
-        // gap: 1rem;
-        // align-items: center;
+        align-items: center; 
+        // flex-grow: 1;
+        // flex-shrink: 0;
+        text-align: center;
+        padding: 0.688rem 0;
+
+        &--gap {
+            flex: 2;
+        }
+
     }
 }
 

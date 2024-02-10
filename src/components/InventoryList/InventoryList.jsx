@@ -34,12 +34,12 @@ export default function InventoryList() {
                 </div>
             </div>
             <div className="inventory-list__list-headers">
-                <h4 className="inventory-list__row-heading row-item">INVENTORY ITEM <img className="sort-icon" src={sort} alt="Sort" /></h4>
-                <h4 className="inventory-list__row-heading row-category">CATEGORY <img className="sort-icon" src={sort} alt="Sort" /></h4>
-                <h4 className="inventory-list__row-heading row-status">STATUS <img className="sort-icon" src={sort} alt="Sort" /></h4>
-                <h4 className="inventory-list__row-heading row-quantity">QTY <img className="sort-icon" src={sort} alt="Sort" /></h4>
-                <h4 className="inventory-list__row-heading row-warehouse">WAREHOUSE <img className="sort-icon" src={sort} alt="Sort" /></h4>
-                <h4 className="inventory-list__row-heading row-actions">Actions<img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">INVENTORY ITEM <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">CATEGORY <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">STATUS <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">QTY <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">WAREHOUSE <img className="sort-icon" src={sort} alt="Sort" /></h4>
+                <h4 className="inventory-list__row-heading">Actions</h4>
             </div>
             <ul className='inventory-list__list'>
                 {inventories.map((item) => {

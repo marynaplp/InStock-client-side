@@ -7,6 +7,10 @@
         display: flex;
         padding: 0 1.5rem;
         border-top: 1px solid $cloud;
+
+        @include tablet {
+            padding:0 2rem;
+        }
     }
 
     &__container-info {
@@ -15,12 +19,12 @@
         @include tablet {
             display: flex;
             align-items: center;
-            flex:1.2;
+            flex:1.25;
         }
 
         &--inactive {
             @include tablet {
-                flex: 2;
+                flex: 1.5;
             }
         }
     }
@@ -28,8 +32,14 @@
     &__inventory-item {
         display: flex;
         align-items: center;
+        color: $instock-indigo;
+        font-weight: 600;
 
         @include tablet {
+            width: 58%;
+        }
+
+        @include desktop {
             width: 55%;
         }
     }
@@ -41,6 +51,7 @@
 
         @include tablet {
             padding: 0;
+            gap: 1rem;
         }
     }
 
@@ -55,13 +66,17 @@
     &__item {
         font-size: 0.813rem;
         padding-top: 0.25rem;
-
-        // @include tablet {
-        //     flex: 0.5;
-        // }
+        
+        @include tablet {
+            padding: 1.125rem 0;
+        }
 
         &--active {
             @include tablet {
+                flex: 0.25;
+            }
+
+            @include desktop {
                 flex: 0.3;
             }
         }
@@ -70,6 +85,10 @@
     &__status-container {
         @include tablet {
             flex: 0.4;
+        }
+
+        @include desktop {
+            flex: 0.35;
         }
     }
 
