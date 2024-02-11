@@ -6,22 +6,29 @@ import chevron from '../../../Assets/Icons/chevron_right-24px.svg'
 import edit from '../../../Assets/Icons/edit-24px.svg';
 import { Link } from 'react-router-dom';
 import React,{useState} from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 function WarehouseCard({ warehouse }) {
-      const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const renderModal = (isOpen, onClose) => (
-        <DeleteWarehouseModal
+      <DeleteWarehouseModal
         isOpen={isOpen}
         onClose={onClose}
         onDelete={handleMockDelete}
-             //warehouseName={warehouse.name}
-        />
+        //warehouseName={warehouse.name}
+      />
     );
-   const handleMockDelete = () => {
-        console.log("Mock delete action executed.");
-        setIsModalOpen(false); 
-      };
+    const handleMockDelete = () => {
+      console.log("Mock delete action executed.");
+      setIsModalOpen(false);
+    };
+
+    const handleEditClick = () => {
+      navigate("/EditWarehouse", { state: { warehouse } });
+      
+    };
 
 
     return (
@@ -47,7 +54,7 @@ function WarehouseCard({ warehouse }) {
             </div>
             <div className="warehouse-card__icons">
                 <DeleteButton onClick={() => setIsModalOpen(true)} renderModal={renderModal} />
-                <img className="warehouse-card__edit" src={edit} alt="Edit Warehouse" />
+                <img className="warehouse-card__edit" src={edit} alt="Edit Warehouse"onClick={handleEditClick}/>
             </div>
         </section>
     )

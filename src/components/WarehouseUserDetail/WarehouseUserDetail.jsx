@@ -10,7 +10,7 @@ function WarehouseUserDetail() {
           <h4 className="Warehouse__Detail-header">warehouse address:</h4>
           <span>
             33 Pearl Street SW,
-            <br class="break__line" /> Washington, USA
+            <br className="break__line" /> Washington, USA
           </span>
         </div>
         <div className="Warehouse__Detail-contact">
