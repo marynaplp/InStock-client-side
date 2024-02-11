@@ -1,10 +1,18 @@
+
 import chevron from '../../../Assets/Icons/chevron_right-24px.svg';
 import edit from '../../../Assets/Icons/edit-24px.svg';
 import deleteBtn from '../../../Assets/Icons/delete_outline-24px.svg';
 import './InventoryCard.scss';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function InventoryCard({item}) {
+  const navigate = useNavigate();
+  
+    const handleEditClick = () => {
+    navigate("/Editinventory",{ state: { item } });
+    console.log(item.category)
+  };
       
     return (
         <section className='inventory-card'>
@@ -34,14 +42,14 @@ export default function InventoryCard({item}) {
                     </div>
                 <div className="inventory-card__icons inventory-card__icons--tablet">
                     <img className="inventory-card__edit" src={deleteBtn} alt="delete button" />
-                    <img className="inventory-card__edit" src={edit} alt="Edit Warehouse" />
+                    <img className="inventory-card__edit" src={edit} alt="Edit Warehouse" onClick={handleEditClick}/>
                 </div>
             </div>
             <div className="inventory-card__icons inventory-card__icons--mobile">
                     <img className="inventory-card__edit" src={deleteBtn} alt="delete button" />
-                    <img className="inventory-card__edit" src={edit} alt="Edit Warehouse" />
+                    <img className="inventory-card__edit" src={edit} alt="Edit Warehouse"  onClick={handleEditClick}/>
             </div>
 
-        </section>
-    )
+ 
+  );
 }
