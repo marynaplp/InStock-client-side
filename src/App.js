@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
+
 import WarehouseListPage from './pages/WarehouseListPage/WarehouseListPage';
 import Header from './components/Header/Header';
 import WarehouseDetail from './pages/WareHouseDetail/WarehouseDetail';
@@ -19,7 +19,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage/>} />;
+          <Route path="/" element={<WarehouseListPage />}/>;
           <Route path="/Warehouse" element={<WarehouseListPage />} />;
           <Route path="/WarehouseDetail" element={<WarehouseDetail/>} />;
           <Route path="/EditWarehouse" element={<EditWarehouse/>} />;
