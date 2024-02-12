@@ -48,7 +48,7 @@ export default function InventoryCard({item}) {
                     <img className="inventory-card__edit" src={deleteBtn} alt="delete button" />
                     <img className="inventory-card__edit" src={edit} alt="Edit Warehouse"  onClick={handleEditClick}/>
             </div>
-</section>
+        </section>
  
   );
 }

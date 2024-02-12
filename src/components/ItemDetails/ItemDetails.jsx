@@ -15,8 +15,6 @@ export default function ItemDetails() {
     const [ inventory, setInventory ] = useState([]);
     const {inventoryId} = useParams()
 
-  
-
     useEffect(() => {
         const getInventoryDetails = async(inventoryId) => {
             if (inventoryId == null) {
@@ -39,7 +37,6 @@ export default function ItemDetails() {
         navigate("/Editinventory",{ state: { item } });
       };
 
-      console.log(inventory.status)
     return (
         <section className='item'>
             <div className='item__container'>
