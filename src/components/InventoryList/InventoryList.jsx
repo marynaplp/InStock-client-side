@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import InventoryCard from './InventoryCard/InventoryCard';
 import sort from '../../Assets/Icons/sort-24px.svg';
+import { Link } from 'react-router-dom';
 
 export default function InventoryList() {
 
@@ -30,7 +31,7 @@ export default function InventoryList() {
                 <h1 className='inventory-list__page-title'>Inventory</h1>
                 <div className='inventory-list__search-container'>
                     <input className="inventory-list__search" id="search" placeholder="Search..." type="text"/>
-                    <button className="inventory-list__button">+Add New Item</button>
+                    <Link to={"/AddInventory"}><button className="inventory-list__button">+Add New Item</button></Link>
                 </div>
             </div>
             <div className="inventory-list__list-headers">
