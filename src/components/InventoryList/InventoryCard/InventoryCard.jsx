@@ -18,7 +18,7 @@ export default function InventoryCard({item}) {
             <div className="inventory-card__list-container">
                     <div className="inventory-card__container-info">
                         <h4 className="inventory-card__header">Inventory Item</h4>
-                        <Link to={`/inventory/${item.id}`}>
+                        <Link to={`/inventory/${item.id}`} className='inventory-card__link'>
                             <div className="inventory-card__inventory-item">
                                 <p className="inventory-card__item">{item.item_name}</p> 
                                 <img  src={chevron} alt='chevron' />
