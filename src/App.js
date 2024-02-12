@@ -1,7 +1,6 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
 import WarehouseListPage from './pages/WarehouseListPage/WarehouseListPage';
 import Header from './components/Header/Header';
 import WarehouseDetail from './pages/WareHouseDetail/WarehouseDetail';
@@ -19,22 +18,15 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage/>} />;
-          <Route path="/Warehouse" element={<WarehouseListPage />} />;
-          <Route path="/WarehouseDetail" element={<WarehouseDetail/>} />;
+          <Route path="/Warehouses" element={<WarehouseListPage />} />;
           <Route path="/EditWarehouse" element={<EditWarehouse/>} />;
           <Route path="/WarehouseDetail/:warehouseId" element={<WarehouseDetail/>} />;
           <Route path="/EditInventory" element={<EditInventory/>} />;
           <Route path="/Add-Warehouse" element={<AddWarehousePage />} />;
-          <Route path="/Delete-Warehouse" element="Delete-Warehouse" />;
           <Route path="/Inventory" element={<InventoryPage/>} />;
           <Route path="/Inventory/:inventoryId" element={<ItemDetails/>} />;
-          <Route path="/Add-Inventory" element="Add-Inventory" />;
-           <Route path="/Delete-Inventory" element="Delete-Inventory" />;
-          <Route path="/Delete-Inventory" element="Delete-Inventory-non" /> 
+          <Route path="/Add-Inventory" element={<AddInventory />} />;
           <Route path="/AddInventory" element={<AddInventory/>} />;
-          <Route path="/Delete-Inventory" element="Delete-Inventory" />;
-          <Route path="/Delete-Inventory" element="Delete-Inventory-non" />;
         </Routes>
         <Footer />
       </div>

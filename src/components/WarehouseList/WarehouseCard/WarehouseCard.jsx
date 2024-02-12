@@ -1,7 +1,6 @@
 import './WarehouseCard.scss';
 import DeleteWarehouseModal from "../../DeleteWarehouseModal/deleteWarehouseModal"
 import DeleteButton from "../../Button/DeleteButton/deleteButton"
-//import trashcan from '../../../Assets/Icons/delete_outline-24px.svg';
 import chevron from '../../../Assets/Icons/chevron_right-24px.svg'
 import edit from '../../../Assets/Icons/edit-24px.svg';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,6 @@ function WarehouseCard({ warehouse }) {
         isOpen={isOpen}
         onClose={onClose}
         onDelete={handleMockDelete}
-        //warehouseName={warehouse.name}
       />
     );
     const handleMockDelete = () => {

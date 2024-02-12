@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import InventoryCard from './InventoryCard/InventoryCard';
 import sort from '../../Assets/Icons/sort-24px.svg';
+import { Link } from 'react-router-dom';
 
 export default function InventoryList() {
 
@@ -30,7 +31,7 @@ export default function InventoryList() {
                 <h1 className='inventory-list__page-title'>Inventory</h1>
                 <div className='inventory-list__search-container'>
                     <input className="inventory-list__search" id="search" placeholder="Search..." type="text"/>
-                    <button className="inventory-list__button">+Add New Item</button>
+                    <Link to={`/Add-Inventory`}><button className="inventory-list__button">+Add New Item</button></Link>
                 </div>
             </div>
             <div className="inventory-list__list-headers">
@@ -50,29 +51,7 @@ export default function InventoryList() {
                         /> 
                     )
                 })}
-
             </ul>
-            {/* <section className='inventory-list__list'>
-                <div className="inventory-list__list-container">
-                    <div className="inventory-list__container-info">
-                        <h4 className="inventory-list__header">Inventory Item</h4>
-                        <div className="inventory-list__inventory-item">
-                            <p className="inventory-list__item">Television</p> <img  src={chevron} alt='chevron' />
-                        </div>
-                        <h4 className="inventory-list__header">CATEGORY</h4>
-                        <p className="inventory-list__item">electronics</p>
-                    </div>
-                    <div className="inventory-list__container-info">
-                        <h4 className="inventory-list__header">Status</h4>
-                        <p className="inventory-list__item-status">In stock</p>
-                        <h4 className="inventory-list__header">QTY</h4>
-                        <p className="inventory-list__item">500</p>
-                        <h4 className="inventory-list__header">WAREHOUSE</h4>
-                        <p className="inventory-list__item">Manhattan</p>
-                    </div>
-                </div>
-            </section> */}
-
         </main>
     )
 }

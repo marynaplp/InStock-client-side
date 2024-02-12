@@ -11,7 +11,6 @@ export default function InventoryCard({item}) {
   
     const handleEditClick = () => {
     navigate("/Editinventory",{ state: { item } });
-    console.log(item.category)
   };
       
     return (
