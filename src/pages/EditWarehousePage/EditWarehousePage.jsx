@@ -4,7 +4,7 @@ import EditWarehouse from "../../components/EditWarehouse/EditWarehouse";
 function EditWarehousePage() {
     return (
         <>
-            <EditWarehouse />
+            {/* <EditWarehouse /> */}
         </>
     )
 }

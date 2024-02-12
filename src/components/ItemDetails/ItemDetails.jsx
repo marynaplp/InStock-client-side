@@ -5,13 +5,17 @@ import EditButton from '../Button/EditButton/EditButton';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ItemDetails() {
+    const navigate = useNavigate();
 
     const { REACT_APP_API_BASE_PATH } = process.env;
 
     const [ inventory, setInventory ] = useState([]);
     const {inventoryId} = useParams()
+
+  
 
     useEffect(() => {
         const getInventoryDetails = async(inventoryId) => {
@@ -30,6 +34,12 @@ export default function ItemDetails() {
 
     }, [inventoryId])
 
+    const handleEditClick = () => {
+        const item = inventory;
+        navigate("/Editinventory",{ state: { item } });
+        console.log(item.category)
+      };
+
     return (
         <section className='item'>
             <div className='item__container'>
@@ -40,7 +50,9 @@ export default function ItemDetails() {
                             <h1 className='item__item-title'>Television</h1>
                         </div>
                     </Link>
-                    <EditButton/>
+                    <EditButton
+                    onClick={handleEditClick}
+                    />
                 </section>
                 <section className='item__info-container'>
                     <div className='item__description-box'>

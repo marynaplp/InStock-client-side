@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import DeleteInventoryModal from '../../DeleteInventoryModal/deleteInventoryModal';
-
+import DeleteInventoryModal from './../../DeleteInventoryModal/deleteInventoryModal'
 import './warehouseInventoryList.scss'; 
 
 function WarehouseInventoryList({ inventoryItems,onDeleteItem, onEditItem }) {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-console.log("ghscdiu",onEditItem);
+
   const showDeleteModal = (item) => {
     setSelectedItem(item);
     setIsDeleteModalOpen(true);

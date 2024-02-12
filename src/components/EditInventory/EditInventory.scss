@@ -25,6 +25,9 @@
             display: flex;
         }
     }
+    &__text-color{
+        color: $instock-black;
+    }
     
     &__header {
         display: flex;
@@ -122,6 +125,7 @@
     }
 
     &__select-menu {
+        
         position: relative;
         width: 100%;
         overflow: hidden;
@@ -131,7 +135,7 @@
 
     &__select {
         border-radius: 20px;
-        color: $slate;
+        color: $instock-black;
         font-family: $main-typeface;
         height: 2.25rem;
         border: 1px solid $cloud;
