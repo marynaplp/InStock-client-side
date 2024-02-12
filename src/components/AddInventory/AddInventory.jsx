@@ -1,11 +1,12 @@
 import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import arrowIcon from '../../Assets/Icons/arrow_back-24px.svg';
 import './AddInventory.scss';
 import axios from 'axios';
 
-export default function AddInventory() {
+function AddInventory() {
     
     const { REACT_APP_API_BASE_PATH } = process.env;
     const formRef = useRef()
@@ -34,7 +35,7 @@ export default function AddInventory() {
         }
 
         try {
-            const url = `${REACT_APP_API_BASE_PATH}/inventory`
+            const url = `${REACT_APP_API_BASE_PATH}/api/inventories`
             let newInventory = await axios.post(url, newInventoryData)
             setInventory([...inventory, newInventory])
             navigate('/Inventory')
@@ -44,7 +45,7 @@ export default function AddInventory() {
     }
 
     useEffect(() => {
-        const url = `${REACT_APP_API_BASE_PATH}/inventory`
+        const url = `${REACT_APP_API_BASE_PATH}/api/inventories`
         const getAllInventories = async() => {
             try {
                 const response = await axios.get(url)
@@ -80,8 +81,7 @@ export default function AddInventory() {
     return(
         <main className="add-inventory">
             <section className="add-inventory__header">
-                <img src={arrowIcon} alt='arrow-icon'/>
-                <h1 className="add-inventory__title"> Add New Inventory Item</h1>
+                <h1 className="add-inventory__title"><Link to={`/Inventory`}><img src={arrowIcon} alt='arrow-icon'/></Link> Add New Inventory Item</h1>
             </section>
             <form onSubmit={addInventory} ref={formRef} className='add-inventory__form' action="" id="form">
                 <div className='add-inventory__form-container add-inventory__form-container--left'>
@@ -165,3 +165,5 @@ export default function AddInventory() {
         </main>
     )
 }
+
+export default AddInventory;

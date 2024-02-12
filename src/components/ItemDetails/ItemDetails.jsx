@@ -21,7 +21,8 @@ export default function ItemDetails() {
                 return
             }
             try {
-                const url = `${REACT_APP_API_BASE_PATH}/inventory/${inventoryId}`;
+                console.log(inventoryId)
+                const url = `${REACT_APP_API_BASE_PATH}/api/inventories/${inventoryId}`;
                 const response = await axios.get(url)
                 setInventory(response.data)
             } catch(err) {
@@ -41,7 +42,7 @@ export default function ItemDetails() {
         <section className='item'>
             <div className='item__container'>
                 <section className='item__header-container'>
-                    <Link to={`/inventory`}>
+                    <Link to={`/Inventory`}>
                         <div className='item__header-title'>
                             <img src={arrowIcon} alt='arrow-icon' />
                             <h1 className='item__item-title'>Television</h1>
