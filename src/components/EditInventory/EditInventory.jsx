@@ -49,7 +49,7 @@ export default function EditInventory() {
 
   const handleSubmit = async (e) => {
 
-    const url = `${REACT_APP_API_BASE_PATH}/inventory/${item.id}`
+    const url = `${REACT_APP_API_BASE_PATH}/api/inventories/${item.id}`
 
     e.preventDefault();
     const updatedItem = {
