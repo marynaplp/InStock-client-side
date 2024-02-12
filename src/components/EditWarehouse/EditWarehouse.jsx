@@ -32,7 +32,7 @@ function EditWarehouse() {
       };
 
       const handleSubmit = async(e) => {
-        const url = `${REACT_APP_API_BASE_PATH}/warehouse/${warehouse.id}`
+        const url = `${REACT_APP_API_BASE_PATH}/api/warehouses/${warehouse.id}`
 
         e.preventDefault();
         const updateValue = {
@@ -46,20 +46,18 @@ function EditWarehouse() {
           contact_phone: formValue.contact_phone,
           contact_email: formValue.contact_email,
         };
-        console.log(updateValue);
 
         try {
             const response = await axios.put(url,updateValue);
-            console.log("value from server",response.data);
         } catch(error) {
             alert("Error: No inventory with that id exists.", error)
-            console.log(error);
+            console.error(error);
         }
         handleBackClick();
       
       };
       const handleBackClick = () => {
-        navigate("/Warehouse");
+        navigate("/Warehouses");
       };
 
     return (

@@ -3,6 +3,7 @@ import './WarehouseList.scss';
 import sort from '../../Assets/Icons/sort-24px.svg';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function WarehouseList() {
 
@@ -11,7 +12,7 @@ function WarehouseList() {
     const [ allWarehouses, setAllWarehouses ] = useState([]);
 
     useEffect(() => {
-        const url = `${REACT_APP_API_BASE_PATH}/warehouse`;
+        const url = `${REACT_APP_API_BASE_PATH}/api/warehouses`;
 
         const getAllWarehouses = async() => {
             try {
@@ -32,7 +33,9 @@ function WarehouseList() {
                 <h1 className="warehouse-list__title">Warehouses</h1>
                 <div className="warehouse-list__search-container">
                     <input className="warehouse-list__search" placeholder="Search..." type="text" />
+                    <Link to={`/Add-Warehouse`}>
                     <button className="warehouse-list__button">+ Add New Warehouse</button>
+                    </Link>
                 </div>
             </div>
             <div className="warehouse-list__list-headers">

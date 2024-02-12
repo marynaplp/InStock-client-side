@@ -39,6 +39,10 @@
         align-items: center;
         color: $instock-indigo;
         font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__icons {
@@ -128,17 +132,12 @@
             width: 7rem;
         }
     }
-}
 
-a {
-    text-decoration: none;
-    width: 58%;
-
-    &:hover {
-        text-decoration: underline;
-    }
-
-    @include desktop {
-        width: 55%;
+    &__link {
+        width: 58%;
+    
+        @include desktop {
+            width: 55%;
+        }
     }
 }

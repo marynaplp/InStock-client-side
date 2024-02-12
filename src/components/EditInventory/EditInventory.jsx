@@ -49,7 +49,7 @@ export default function EditInventory() {
 
   const handleSubmit = async (e) => {
 
-    const url = `${REACT_APP_API_BASE_PATH}/inventory/${item.id}`
+    const url = `${REACT_APP_API_BASE_PATH}/api/inventories/${item.id}`
 
     e.preventDefault();
     const updatedItem = {
@@ -64,10 +64,9 @@ export default function EditInventory() {
 
     try {
       const response = await axios.put(url,updatedItem);
-      console.log("value from server",response.data);
   } catch(error) {
       alert("Error: No inventory with that id exists.", error)
-      console.log(error);
+      console.error(error);
   }
   handleBackClick();
 

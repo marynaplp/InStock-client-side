@@ -12,7 +12,6 @@ function WarehouseInventoryList({ inventoryItems,onDeleteItem, onEditItem }) {
   }; 24
 
   const handleDelete = (itemId) => {
-    console.log('Deleting item with id:', itemId);
     setIsDeleteModalOpen(false);
   };
 

@@ -68,10 +68,11 @@
 
         @include tablet {
             padding: 0 1rem;
+            width: 100%;
         }
     }
 
-    &__inventory {
+    &__state {
         height: 2.25rem;
         display: flex;
         align-items: center;
