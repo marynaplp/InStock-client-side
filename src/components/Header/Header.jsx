@@ -18,9 +18,11 @@ export default function Header() {
         <>
             <header className="header">
                 <div className="header__container">
+               
                     <nav className="header__logo-container">
                         <Link to={`/Warehouses`} onClick={() => updateActiveLink('Warehouses')}><img src={logo} alt="InStock logo" className="header__logo"/></Link>
                     </nav>
+                    
                     <nav className="header__nav-bar">
                         <div className={`header__state ${activeLink === 'Warehouses' ? 'header__active-nav-item' : 'header__nav-link--inactive'}`}>
                             <Link to={`/Warehouses`} onClick={() => updateActiveLink('Warehouses')}> 
