@@ -24,7 +24,7 @@ export default function ItemDetails() {
             }
             try {
                 console.log(inventoryId)
-                const url = `${REACT_APP_API_BASE_PATH}/inventory/${inventoryId}`;
+                const url = `${REACT_APP_API_BASE_PATH}/api/inventories/${inventoryId}`;
                 const response = await axios.get(url)
                 setInventory(response.data)
             } catch(err) {

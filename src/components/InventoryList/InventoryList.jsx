@@ -11,7 +11,7 @@ export default function InventoryList() {
     const [ inventories, setInventories ] = useState([])
 
     useEffect(() => {
-        const url = `${REACT_APP_API_BASE_PATH}/inventory`
+        const url = `${REACT_APP_API_BASE_PATH}/api/inventories`
 
         const getAllInventories = async() => {
             try {
