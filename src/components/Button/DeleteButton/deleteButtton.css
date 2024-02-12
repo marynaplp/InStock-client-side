@@ -1,0 +1,11 @@
+.delete-button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.delete-button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}/*# sourceMappingURL=deleteButtton.css.map */
