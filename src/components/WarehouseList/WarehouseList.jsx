@@ -11,14 +11,14 @@ function WarehouseList() {
     const [ allWarehouses, setAllWarehouses ] = useState([]);
 
     useEffect(() => {
-        const url = `${REACT_APP_API_BASE_PATH}/warehouse`;
+        const url = `${REACT_APP_API_BASE_PATH}/api/warehouses`;
 
         const getAllWarehouses = async() => {
             try {
                 const response = await axios.get(url)
                 setAllWarehouses(response.data)
             } catch(err) {
-                alert.window("Error: No warehouse with that id exists.", err)
+                alert("Error: No warehouse with that id exists.", err)
             }
         }
         getAllWarehouses();
