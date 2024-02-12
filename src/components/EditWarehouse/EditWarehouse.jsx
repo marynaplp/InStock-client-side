@@ -46,14 +46,12 @@ function EditWarehouse() {
           contact_phone: formValue.contact_phone,
           contact_email: formValue.contact_email,
         };
-        console.log(updateValue);
 
         try {
             const response = await axios.put(url,updateValue);
-            console.log("value from server",response.data);
         } catch(error) {
             alert("Error: No inventory with that id exists.", error)
-            console.log(error);
+            console.error(error);
         }
         handleBackClick();
       

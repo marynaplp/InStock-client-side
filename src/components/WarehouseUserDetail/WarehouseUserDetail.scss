@@ -8,8 +8,6 @@
     top: -6.25rem;
     z-index: 10;
    
-
-
     &__Detail {
         display: flex;
         flex-direction: column;
@@ -21,26 +19,18 @@
         margin-right: 1rem;
         background-color: $white;
         
-
-
         @include tablet {
             flex-direction: row;
-            // padding-left: 2rem;
-            // padding-right: 2rem;
             margin-left: 2rem;
             margin-right: 2rem;
-            // justify-content: space-around;
             justify-content: space-between;
         }
 
         @include desktop {
             flex-direction: row;
-            // padding-left: 7rem;
-            // padding-right: 7rem;
             margin-left: 7rem;
             margin-right: 7rem;
             justify-content: space-between;
-            
         }
 
         &-section {
@@ -55,13 +45,11 @@
         &-address {
             padding-top: 1rem;
 
-
             @include tablet {
                 margin-top: 2rem;
                 margin-bottom: 2rem;
                 align-items: center;
                 padding-top: 0px;
-
             }
 
             @include desktop {
@@ -69,9 +57,7 @@
                 margin-bottom: 2rem;
                 align-items: center;
                 padding-top: 0px;
-
             }
-
         }
 
         &-contact {
@@ -82,8 +68,6 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             
-
-
             @include tablet {
                 border-left: 2px solid $cloud;
                 padding-left: 20px;
@@ -92,7 +76,6 @@
                 align-items: center;
                 width: auto;
                 padding-top: 0px;
-
             }
 
             @include desktop {
@@ -103,10 +86,8 @@
                 align-items: center;
                 width: auto;
                 padding-top: 0px;
-
             }
         }
-
     }
 }
 
