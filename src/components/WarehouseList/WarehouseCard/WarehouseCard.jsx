@@ -19,7 +19,6 @@ function WarehouseCard({ warehouse }) {
       />
     );
     const handleMockDelete = () => {
-      console.log("Mock delete action executed.");
       setIsModalOpen(false);
     };
 

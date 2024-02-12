@@ -64,10 +64,9 @@ export default function EditInventory() {
 
     try {
       const response = await axios.put(url,updatedItem);
-      console.log("value from server",response.data);
   } catch(error) {
       alert("Error: No inventory with that id exists.", error)
-      console.log(error);
+      console.error(error);
   }
   handleBackClick();
 
