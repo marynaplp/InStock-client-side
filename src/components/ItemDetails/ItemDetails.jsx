@@ -37,9 +37,9 @@ export default function ItemDetails() {
     const handleEditClick = () => {
         const item = inventory;
         navigate("/Editinventory",{ state: { item } });
-        console.log(item.category)
       };
 
+      console.log(inventory.status)
     return (
         <section className='item'>
             <div className='item__container'>
@@ -65,7 +65,9 @@ export default function ItemDetails() {
                         <div className='item__inventory-container'>
                             <div className='item__inventory-status'>
                                 <h4 className='item__title'>STATUS:</h4>
-                                <p className='item__status'>{inventory.status}</p>
+                                <p className={`item__status ${inventory.status == 'Out of Stock' ? 'item__status--out-of-stock' : ''}`}>
+                                    {(inventory.status || 'Not Available').toUpperCase()}
+                                </p>
                             </div>
                             <div className='item__inventory-status'>
                                 <h4 className='item__title'>QUANTITY:</h4>
