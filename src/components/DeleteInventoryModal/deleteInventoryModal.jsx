@@ -1,4 +1,3 @@
-// DeleteInventoryModal.js
 import React from 'react';
 import "./deleteInventorModal.scss"
 
