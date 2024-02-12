@@ -50,29 +50,7 @@ export default function InventoryList() {
                         /> 
                     )
                 })}
-
             </ul>
-            {/* <section className='inventory-list__list'>
-                <div className="inventory-list__list-container">
-                    <div className="inventory-list__container-info">
-                        <h4 className="inventory-list__header">Inventory Item</h4>
-                        <div className="inventory-list__inventory-item">
-                            <p className="inventory-list__item">Television</p> <img  src={chevron} alt='chevron' />
-                        </div>
-                        <h4 className="inventory-list__header">CATEGORY</h4>
-                        <p className="inventory-list__item">electronics</p>
-                    </div>
-                    <div className="inventory-list__container-info">
-                        <h4 className="inventory-list__header">Status</h4>
-                        <p className="inventory-list__item-status">In stock</p>
-                        <h4 className="inventory-list__header">QTY</h4>
-                        <p className="inventory-list__item">500</p>
-                        <h4 className="inventory-list__header">WAREHOUSE</h4>
-                        <p className="inventory-list__item">Manhattan</p>
-                    </div>
-                </div>
-            </section> */}
-
         </main>
     )
 }
