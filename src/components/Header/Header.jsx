@@ -1,7 +1,7 @@
 import logo from "../../Assets/Logo/InStock-Logo_2x.png";
 import './Header.scss';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
     const [activeLink, setActiveLink] = useState('');
@@ -9,6 +9,10 @@ export default function Header() {
     const updateActiveLink = (linkName) => {
         setActiveLink(linkName);
     };
+
+    useEffect(() => {
+        setActiveLink('Warehouses')
+    }, [])
 
     return (
         <>
