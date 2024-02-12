@@ -5,8 +5,16 @@
 .Warehouse {
     
     position: relative;
-    top: -6.25rem;
+    top: -4.25rem;
     z-index: 10;
+
+    @include tablet {
+        top: -6.25rem;
+    }
+
+    @include desktop {
+        top: -6.25rem;
+    }
    
     &__Detail {
         display: flex;
