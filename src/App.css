@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../Assets/Fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../../Assets/Fonts/TitilliumWeb-Regular.woff") format("woff"), url("../../Assets/Fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../Assets/Fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../../Assets/Fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../../Assets/Fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+/* 767px */
+/* 1280px */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #13182C;
+  background-color: #F7F8F9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+@media (min-width: 47.938rem) {
+  h1 {
+    font-size: 2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+  font-size: 1.25rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 47.938rem) {
+  h2 {
+    font-size: 1.5rem;
   }
 }
+
+h3 {
+  font-size: 0.813rem;
+}
+@media (min-width: 47.938rem) {
+  h3 {
+    font-size: 0.875rem;
+  }
+}
+
+h4 {
+  font-size: 0.688rem;
+  text-transform: uppercase;
+  color: #5C667E;
+}
+@media (min-width: 47.938rem) {
+  h4 {
+    font-size: 0.75rem;
+  }
+}
+
+button {
+  height: 2.25rem;
+  padding: 0 1rem;
+  width: 100%;
+  border-radius: 20px;
+  border-style: none;
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+}
+@media (min-width: 47.938rem) {
+  button {
+    height: 2.375rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+input {
+  border-radius: 20px;
+  color: #5C667E;
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  height: 2.25rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #BDC5D5;
+}
+@media (min-width: 47.938rem) {
+  input {
+    height: 2.375rem;
+  }
+}
+
+.p1 {
+  font-size: 1rem;
+}
+@media (min-width: 47.938rem) {
+  .p1 {
+    font-size: 0.938rem;
+  }
+}
+
+.p2 {
+  font-size: 0.875rem;
+}
+@media (min-width: 47.938rem) {
+  .p2 {
+    font-size: 0.813rem;
+  }
+}
+
+.p3 {
+  font-size: 0.75rem;
+}
+@media (min-width: 47.938rem) {
+  .p3 {
+    font-size: 0.688rem;
+  }
+}/*# sourceMappingURL=App.css.map */

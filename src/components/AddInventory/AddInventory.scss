@@ -1,0 +1,156 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.add-inventory {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -4.25rem;
+    z-index: 10;
+    box-shadow: 0px 2px 5px 0px rgba($instock-black, 0.10);
+
+    @include tablet {
+        top: -6.6rem;
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        top: -14.6rem;
+        margin: 8.125rem;
+    }
+
+    &__form {
+        @include tablet {
+            display: flex;
+        }
+    }
+    
+    &__header {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+
+        @include tablet {
+            padding: 2rem 2rem 1.313rem 2rem;
+        }
+
+        @include desktop {
+            padding: 2rem 2.5rem 1.313rem 2.5rem;
+        }
+    }
+
+    &__form-container{
+        padding: 1.5rem;
+        border-top: $divider;
+
+        @include tablet {
+            flex: 1;
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+        }
+
+        &--left {
+            @include tablet {
+            padding-right: 0;
+            }
+        }
+    }
+
+    &__divider {
+        @include tablet {
+            border-right: $divider;
+            padding-right: 2rem;
+        }
+
+        @include desktop {
+            padding-right: 2.5rem;
+        }
+    }
+
+    &__form-input {
+        padding-top: 1rem;
+    }
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        background-color: $light-grey;
+        padding: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+    }
+
+    &__cancel {
+        border: 1px solid $cloud;
+        color: $slate;
+        background-color: $white;
+        font-weight: 600;
+    }
+
+    &__add {
+        background-color: $instock-indigo;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &__label {
+        padding-bottom: 4px;
+    }
+
+    &__status-container {
+        display: flex;
+    }
+
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__radio-btn {
+        border: 1px solid $cloud;
+        height: 1rem;
+        width: 10%;
+
+        &--out-of-stock {
+            color: $red;
+            background-color: rgba($red, 0.07);
+            // width: 7rem;
+        }
+    }
+
+    &__select-menu {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background: url('../../Assets/Icons/arrow_drop_down-24px.svg') no-repeat 98%;
+        
+    }
+
+    &__select {
+        border-radius: 20px;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        border: 1px solid $cloud;
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        font-size: 13px; 
+        padding: 8px 38px 8px 10px; 
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+#description {
+    padding: 1rem 0.75rem 5.75rem 0.75rem;
+}

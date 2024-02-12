@@ -1,0 +1,124 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.Warehouse {
+    
+    position: relative;
+    top: -6.25rem;
+    z-index: 10;
+   
+
+
+    &__Detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: $white;
+        
+
+
+        @include tablet {
+            flex-direction: row;
+            // padding-left: 2rem;
+            // padding-right: 2rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            // justify-content: space-around;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            // padding-left: 7rem;
+            // padding-right: 7rem;
+            margin-left: 7rem;
+            margin-right: 7rem;
+            justify-content: space-between;
+            
+        }
+
+        &-section {
+            width: 50%;
+        }
+
+        &-header {
+            margin: 0px;
+            padding-bottom: 4px;
+        }
+
+        &-address {
+            padding-top: 1rem;
+
+
+            @include tablet {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                align-items: center;
+                padding-top: 0px;
+
+            }
+
+            @include desktop {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                align-items: center;
+                padding-top: 0px;
+
+            }
+
+        }
+
+        &-contact {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            
+
+
+            @include tablet {
+                border-left: 2px solid $cloud;
+                padding-left: 20px;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                align-items: center;
+                width: auto;
+                padding-top: 0px;
+
+            }
+
+            @include desktop {
+                border-left: 2px solid $cloud;
+                padding: 20px;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                align-items: center;
+                width: auto;
+                padding-top: 0px;
+
+            }
+        }
+
+    }
+}
+
+.break__line {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+    @include desktop {
+        display: block;
+    }
+
+}

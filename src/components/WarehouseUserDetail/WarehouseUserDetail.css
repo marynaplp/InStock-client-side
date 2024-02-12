@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../Assets/Fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../../Assets/Fonts/TitilliumWeb-Regular.woff") format("woff"), url("../../Assets/Fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../Assets/Fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../../Assets/Fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../../Assets/Fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+/* 767px */
+/* 1280px */
+.Warehouse {
+  position: relative;
+  top: -6.25rem;
+  z-index: 10;
+}
+.Warehouse__Detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #FFFFFF;
+}
+@media (min-width: 47.938rem) {
+  .Warehouse__Detail {
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 80rem) {
+  .Warehouse__Detail {
+    flex-direction: row;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    justify-content: space-between;
+  }
+}
+.Warehouse__Detail-section {
+  width: 50%;
+}
+.Warehouse__Detail-header {
+  margin: 0px;
+  padding-bottom: 4px;
+}
+.Warehouse__Detail-address {
+  padding-top: 1rem;
+}
+@media (min-width: 47.938rem) {
+  .Warehouse__Detail-address {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 80rem) {
+  .Warehouse__Detail-address {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    padding-top: 0px;
+  }
+}
+.Warehouse__Detail-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 47.938rem) {
+  .Warehouse__Detail-contact {
+    border-left: 2px solid #BDC5D5;
+    padding-left: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    width: auto;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 80rem) {
+  .Warehouse__Detail-contact {
+    border-left: 2px solid #BDC5D5;
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    width: auto;
+    padding-top: 0px;
+  }
+}
+
+.break__line {
+  display: none;
+}
+@media (min-width: 47.938rem) {
+  .break__line {
+    display: block;
+  }
+}
+@media (min-width: 80rem) {
+  .break__line {
+    display: block;
+  }
+}/*# sourceMappingURL=WarehouseUserDetail.css.map */

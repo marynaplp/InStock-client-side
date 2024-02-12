@@ -1,0 +1,106 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.inventory-list {
+    margin: $mobile-margin;
+    background-color: $white;
+    border-radius: 4px;
+    position: relative;
+    top: -4.25rem;
+    z-index: 10;
+
+    @include tablet {
+        margin: $tablet-margin;
+        top: -5.9rem;
+    }
+
+    @include desktop {
+        margin: $desktop-margin;
+        width: 80%;
+    }
+
+    &__header {
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    &__list {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    &__page-title {
+        padding: 2rem 1.5rem 0 1.5rem;
+
+        @include tablet {
+            padding: 0 0 0 2rem;
+            flex: 1;
+        }
+    }
+
+    &__search-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            padding: 2rem 2rem 1.5rem 0;
+            flex: 1;
+        }
+    }
+
+    &__search {
+        flex: 1;
+        background-image: url('../../Assets/Icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: 98%;
+        border-radius: $border-radius;
+        color: $slate;
+        font-family: $main-typeface;
+        height: 2.25rem;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $cloud;
+
+        @include tablet {
+            height: 2.375rem;
+            margin-right: 1rem;
+        }
+    }
+   
+    &__button {
+        border-style: none;
+        color: $white;
+        font-weight: 600;;
+        background-color: $instock-indigo;
+        margin: 1rem 0;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__list-headers {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            align-items: center; 
+            padding: 0 2rem;
+            justify-content: space-between; 
+            background-color: rgba($light-grey, 0.7);
+        }
+
+    }
+
+    &__row-heading {
+        display: flex;
+        align-items: center; 
+        text-align: center;
+        padding: 0.688rem 0;
+    }
+}

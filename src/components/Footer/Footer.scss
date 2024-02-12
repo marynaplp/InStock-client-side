@@ -1,0 +1,11 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        color: $slate;
+    }
+}

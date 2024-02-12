@@ -1,0 +1,136 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+.warehouse-card {
+    padding: 0 1.25rem;
+    border-top: $divider;
+    width: 100%;
+
+    @include tablet {
+        display: flex;
+        padding: 1.55rem 2.25rem;
+        border-top: none;
+        border-bottom: 1px solid $cloud;
+        justify-content: space-between;
+
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+
+        @include tablet {
+            gap: 0;
+            width: 88%;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+
+        @include desktop {
+            gap: 2rem;
+        }
+    
+        &--left {
+            width: 50%;
+
+            @include tablet {
+                display: flex;
+                align-items: center;
+                width: 44.5%;
+                gap: 1rem;
+            }
+
+            @include desktop {
+                gap: 2rem;
+            }
+        }
+
+        &--right {
+            width: 50%;
+
+            @include tablet {
+                display: flex;
+                align-items: center;
+                width: 55%;
+                gap: 1rem;
+            }
+
+            @include desktop {
+                gap: 2rem;
+            }
+        }
+    }
+
+    &__header {
+        margin: 1rem 0 0.25rem 0;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__icons {
+        padding: 1rem 0 1.25rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
+            width: 10%;
+        }
+    }
+
+    &__trashcan {
+        @include tablet {
+            padding-right: 1rem;
+        }
+    }
+
+
+    &__location {
+        text-decoration: none;
+        font-weight: 600;
+        color: $instock-indigo;
+        display: flex;
+
+            @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__street-address {
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__name {
+        
+        @include tablet {
+            width: 40%;
+        }
+    }
+
+    &__contact {
+        
+        @include tablet {
+            width: 60%;
+        }
+    }
+
+    &__actions {
+
+        @include tablet {
+            width: 20%;
+        }
+    }
+}
+
+.p2 {
+    margin-bottom: 0.25rem;
+}
+
