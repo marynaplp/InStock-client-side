@@ -33,7 +33,7 @@ function WarehouseList() {
                 <h1 className="warehouse-list__title">Warehouses</h1>
                 <div className="warehouse-list__search-container">
                     <input className="warehouse-list__search" placeholder="Search..." type="text" />
-                    <Link to={`/Add-Warehouse`}>
+                    <Link className="warehouse-list__button-link" to={`/Add-Warehouse`}>
                     <button className="warehouse-list__button">+ Add New Warehouse</button>
                     </Link>
                 </div>

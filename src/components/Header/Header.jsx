@@ -11,15 +11,11 @@ export default function Header() {
                         <Link to={`/Warehouses`}><img src={logo} alt="instock-logo" className="header__logo"/></Link>
                     </nav>
                     <nav className="header__nav-bar">
-                        <Link to={`/Warehouses`}>
-                            <div className="header__active-nav-item">
+                        <Link className="header__active-nav-item" to={`/Warehouses`}>
                                 <h3 className="header__nav-link">Warehouses</h3>
-                            </div>
                         </Link>
-                        <Link to={`/Inventory`}>
-                            <div className="header__inventory">
+                        <Link className="header__inventory" to={`/Inventory`}>
                                 <h3 className="header__nav-link header__nav-link--inactive">Inventory</h3>
-                            </div>
                         </Link>
                     </nav>
                 </div>
