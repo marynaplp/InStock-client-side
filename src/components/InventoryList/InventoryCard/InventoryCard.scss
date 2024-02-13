@@ -34,14 +34,6 @@
         }
     }
 
-    &__inventory-link{
-        width: 58%;
-
-        @include desktop {
-            width: 55%;
-        }
-    }
-
     &__inventory-item {
         display: flex;
         align-items: center;
@@ -141,7 +133,7 @@
         }
     }
 
-    &__link {
+    &__inventory-link {
         width: 58%;
     
         @include desktop {
